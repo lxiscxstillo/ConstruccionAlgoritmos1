@@ -1,8 +1,20 @@
 class CDT:
     #Aqui va el codigo
-    '''
-Atributos
-'''
-valorInvertido=0
-interesMensual=0
-mesApertura=0
+
+    '''-------------------------------------------------------------------------------------------------------
+    # Atributos
+    -------------------------------------------------------------------------------------------------------'''
+
+    valorInvertido=0
+    interesMensual=0
+    mesApertura=0
+
+    '''-------------------------------------------------------------------------------------------------------
+    # Metodos
+    -------------------------------------------------------------------------------------------------------'''
+
+    def ConsultarSaldo(self):
+        return self.valorInvertido
+    
+    def ConsultarInteresMensual(self):
+        return self.interesMensual
