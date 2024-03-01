@@ -14,36 +14,42 @@ class SimuladorBancario:
     '''
     # Asociaciones
     '''
-    CDT = CDT()
-    CuentaAhorros = CuentaAhorros()
-    CuentaCorriente = CuentaCorriente()
+    cdt = CDT()
+    ahorros = CuentaAhorros()
+    corriente = CuentaCorriente()
 
     '''
     # Metodos
     '''
 
-    def ConsignarCuentaCorriente(self):
-        return self.CuentaCorriente.Consignar()
+    def ConsignarCuentaCorriente(self, monto):
+        self.corriente.Consignar(monto)
+    
+    def ConsignarCuentaAhorros(self, monto):
+        self.ahorros.Consignar(monto)
     
     def ConsultarSaldoTotal(self):
-        saldoTotal = self.CuentaCorriente.ConsultarSaldo() + self.CuentaAhorros.ConsultarSaldo()
-        return saldoTotal
+        return self.corriente.ConsultarSaldo() + self.ahorros.ConsultarSaldo()
     
-    def TransferirAhorrosCorriente(self, monto):
-        return 
+    def TransferirAhorrosACorriente(self):
+        self.ConsignarCuentaCorriente(self.ahorros.ConsultarSaldo)
+        self.ahorros.Retirar(self.ahorros.ConsultarSaldo)
     
-    def RetirarSaldoCuentaAhorros(self):
-        retirar = self.CuentaAhorros.Retirar()
-        return retirar
-    
+    def RetirarCuentaAhorros(self, monto):
+        self.ahorros.Retirar(monto)
+
+    def RetirarCuentaCorriente(self, monto):
+        self.ahorros.Retirar(monto)
+        
     def ConsultarSaldoCuentaCorriente(self):
-        return self.CuentaCorriente.ConsultarSaldo()
+        return self.corriente.ConsultarSaldo()
     
-    def RetirarCuentaCorrienteAhorros(self):
-        ahorros = self.CuentaAhorros.Retirar()
-        corriente = self.CuentaCorriente.Retirar()
-        todo = ahorros + corriente
-        return todo
+    def RetirarTodo(self):
+        total = self.ConsultarSaldoTotal()
+        self.TransferirAhorrosACorriente()
+        self.RetirarCuentaCorriente
+
+        return total
     
-    def DuplicarSaldoCuentaAhorros(self):
-        self.CuentaAhorros.saldo *= 2
+    def DuplicarAhorro(self):
+        self.ConsignarCuentaAhorros(self.ahorros.ConsultarSaldo)

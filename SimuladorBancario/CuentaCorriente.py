@@ -14,10 +14,8 @@ class CuentaCorriente:
     def ConsultarSaldo(self):
         return self.saldo
     
-    def Consignar(self, Monto):
-        consignar = self.saldo + Monto
-        return "saldo actualizado" + consignar
+    def Consignar(self, monto):
+        self.saldo += monto
     
-    def Retirar(self, Monto): 
-        retirar = self.saldo - Monto
-        return "saldo actualizado" + retirar
+    def Retirar(self, monto): 
+        self.saldo -= monto

@@ -12,16 +12,14 @@ class CuentaAhorros:
     # Metodos
     --------------------------------------------------------------------------------------------------------'''
 
-    def Consignar(self, Monto):
-        consignar = self.saldo + Monto
-        return "saldo actualizado" + consignar
+    def Consignar(self, monto):
+        self.saldo += monto
     
     def ConsultarSaldo(self):
         return self.saldo
     
-    def Retirar(self, Monto): 
-        retirar = self.saldo - Monto
-        return "saldo actualizado" + retirar
+    def Retirar(self, monto): 
+        self.saldo -= monto
     
     def ConsultarInteresMensual(self):
         return self.interesMensual
