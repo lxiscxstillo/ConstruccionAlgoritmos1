@@ -60,4 +60,6 @@ class Empleado:
     def ConsultarCumpleanios(self):
         return self.fechaNacimiento.ConsultarDia()
     
-    
+    def ConsultarIVA(self):
+        impuesto = self.CalcularSalarioAnual() * 0.195
+        return impuesto 
