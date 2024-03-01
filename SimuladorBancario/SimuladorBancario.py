@@ -31,3 +31,19 @@ class SimuladorBancario:
     
     def TransferirAhorrosCorriente(self, monto):
         return 
+    
+    def RetirarSaldoCuentaAhorros(self):
+        retirar = self.CuentaAhorros.Retirar()
+        return retirar
+    
+    def ConsultarSaldoCuentaCorriente(self):
+        return self.CuentaCorriente.ConsultarSaldo()
+    
+    def RetirarCuentaCorrienteAhorros(self):
+        ahorros = self.CuentaAhorros.Retirar()
+        corriente = self.CuentaCorriente.Retirar()
+        todo = ahorros + corriente
+        return todo
+    
+    def DuplicarSaldoCuentaAhorros(self):
+        self.CuentaAhorros.saldo *= 2
