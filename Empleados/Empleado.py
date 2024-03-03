@@ -14,6 +14,7 @@ class Empleado:
     ----------------------------------------------------------'''
     sexo=0
     salario=0
+    numero_hijos_empleado=0
 
     '''----------------------------------------------------------
     # Asociaciones
@@ -32,6 +33,20 @@ class Empleado:
         self.apellidos = apellidos
         self.salario = salario
         self.sexo = sexo
+
+    def ConsultarHijosEmpleado(self):
+        return "El numero de hijos del empleado es " + self.numero_hijos_empleado
+    
+    def CalcularAuxilioEducativo(self):
+        "el total del auxilio educativo para el empleado es de " + (self.ConsultarSalario * 0.05) * self.ConsultarHijosEmpleado
+
+    def CalcularAuxilioEducativoEmpleado(self, porcentajeSalario):
+        "el total del auxilio educativo para el empleado es de" + self.ConsultarSalario * porcentajeSalario
+
+    def CalcularDiferenciaSalarialRespectoOtroEmpleado(self, segundoEmpleado)
+        salarioSegundoEmpleado = self.ConsultarSalario
+        return self.ConsultarSalario - salarioSegundoEmpleado
+
 
     def CambiarSalario(self, nSalario):
         #aqui va el codigo
