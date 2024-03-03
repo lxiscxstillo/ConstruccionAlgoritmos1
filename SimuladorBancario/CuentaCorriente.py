@@ -18,4 +18,5 @@ class CuentaCorriente:
         self.saldo += monto
     
     def Retirar(self, monto): 
-        self.saldo -= monto
+        descuento = monto * 0.01
+        self.saldo -= monto + descuento

@@ -4,12 +4,14 @@ from CDT import CDT
 
 class SimuladorBancario:
     #Aqui va el codigo
-    '''
+    '''------------------------------------------------------
     Atributos
-    '''
+    -------------------------------------------------------'''
     cedula=0
     nombres=0
     mes_actual=0
+    tipo_cliente=""
+
 
     '''
     # Asociaciones
@@ -18,9 +20,20 @@ class SimuladorBancario:
     ahorros = CuentaAhorros()
     corriente = CuentaCorriente()
 
-    '''
+    '''----------------------------------------------------
     # Metodos
-    '''
+    ----------------------------------------------------'''
+
+    #constructor
+
+    def __init__(self, cedula, nombres, mes_actual, tipo_cliente)
+        self.cedula = cedula
+        self.nombres = nombres
+        self.mes_actual = mes_actual
+        self.tipo_cliente = tipo_cliente
+
+    def CambiarTipoCliente(self, nuevoTipoCliente):
+        self.tipo_cliente = nuevoTipoCliente
 
     def ConsignarCuentaCorriente(self, monto):
         self.corriente.Consignar(monto)
