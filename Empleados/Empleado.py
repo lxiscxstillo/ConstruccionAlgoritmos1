@@ -7,8 +7,8 @@ class Empleado:
     # Atributos
     ---------------------------------------------------------'''
 
-    nombres=''
-    apellidos=''
+    nombre=''
+    apellido=''
     '''---------------------------------------------------------
     # 1 = Masculino y 2 = Femenino
     ----------------------------------------------------------'''
@@ -43,8 +43,8 @@ class Empleado:
     def CalcularAuxilioEducativoEmpleado(self, porcentajeSalario):
         "el total del auxilio educativo para el empleado es de" + self.ConsultarSalario * porcentajeSalario
 
-    def CalcularDiferenciaSalarialRespectoOtroEmpleado(self, segundoEmpleado)
-        salarioSegundoEmpleado = self.ConsultarSalario
+    def CalcularDiferenciaSalarialRespectoOtroEmpleado(self, salarioSegundoEmpleado):
+        # salarioSegundoEmpleado = Empleado.ConsultarSalario
         return self.ConsultarSalario - salarioSegundoEmpleado
 
 
@@ -86,3 +86,6 @@ class Empleado:
     def ConsultarIVA(self):
         impuesto = self.CalcularSalarioAnual() * 0.195
         return impuesto 
+    
+# Empleado.__init__(Empleado,'pepe', 'perez', 1000, 1)
+# Empleado.ConsultarHijosEmpleado(Empleado) 

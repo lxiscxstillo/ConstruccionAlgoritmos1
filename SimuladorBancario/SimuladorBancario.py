@@ -26,7 +26,7 @@ class SimuladorBancario:
 
     #constructor
 
-    def __init__(self, cedula, nombres, mes_actual, tipo_cliente)
+    def __init__(self, cedula, nombres, mes_actual, tipo_cliente):
         self.cedula = cedula
         self.nombres = nombres
         self.mes_actual = mes_actual
